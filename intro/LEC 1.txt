@@ -1,0 +1,20 @@
+<div>...</div>
+	-> contains things in a group
+
+<h1-6>, <p> contained within <body>
+
+<img.../>
+	-> doesn't have an end tag like others
+
+<a href>
+	-> tells u where the link is
+
+CSS
+• we can use in-line CSS w/ "style" attribute
+• internal stylesheet in <head> where all metadata goes
+• correct way
+	• external stylesheet (.css file to contian all css code)
+
+Flexbox
+• css property, defines flex container
+• default: flex items laid out in source order
