@@ -16,7 +16,7 @@
 </head>
 
 <body class="light" id="top">
-  <header class="header center">
+  <header class="* header center">
     <!-- BEGIN PART 2 -->
     <h3>
       <a class="link">E.S.H.</a>
@@ -25,7 +25,7 @@
     <nav class="nav center">
       <ul class="nav__list center">
         <li class="nav__list-item">
-          <a class="link link--nav hvr-underline-from-left" href="#projects">Projects</a>
+          <a class="link link--nav" href="#projects">Projects</a>
         </li>
         <li class="nav__list-item">
           <a class="link link--nav" href="#skills">Skills</a>
@@ -43,8 +43,8 @@
 
       <!-- 
         5.1: What does this button tag correspond to on the site? 
-      
-      
+
+        This button tag corresponds to the dark/light mode on the website. When we toggle it, we change between the two modes.
       -->
 
       <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
@@ -57,7 +57,8 @@
         make it so that this button appears on screen? 
         Hint: remember what @media (max-width: 600px) means.
 
-
+        This button is used when we shrink the width of the webpage. The hamburger icon/button that we can toggle shows up
+        when the width of the webpage is less than 600px.
        -->
 
       <!-- END PART 5 -->
@@ -67,39 +68,90 @@
   <main>
     <div class="about center">
       <!-- BEGIN PART 6 -->
-      <!-- END PART 6 -->
-      <div class="about__contact center">
-        <a href="https://example.com">
-          <span class="btn btn--outline">Resume</span>
-        </a>
+      <h1>
+        <span class="about__name">Hi! I'm Ellie.</span>
+      </h1>
+      <div id="picture">
+        <img src="https://waggingtailsaz.com/wp-content/uploads/2017/05/279f76048b6303d284dff577f3c950ac_mykonos-greek-cuisine-cute-dog-clipart-transparent-background_403-600.png" alt="Ellie Sara Huang" class="about__img" />
+        <div>
+          <h3 class="about__role">
+            Freshman at UC Berkeley studying EECS. 👩🏻‍💻
+          </h3>
 
-        <a href="https://github.com/" aria-label="github" class="link link--icon">
-          <i aria-hidden="true" class="fab fa-github"></i>
-        </a>
-
-        <a href="https://linkedin.com/in/" aria-label="linkedin" class="link link--icon">
-          <i aria-hidden="true" class="fab fa-linkedin"></i>
-        </a>
+          <div id="picture-under" class="about__contact center">
+            <a href="https://example.com">
+              <span class="btn btn--outline">Resume</span>
+            </a>
+    
+            <a href="https://github.com/" target="_blank" aria-label="github" class="link link--icon">
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+    
+            <a href="https://www.linkedin.com/in/elliesarahuang/" target="_blank" aria-label="linkedin" class="link link--icon">
+              <i aria-hidden="true" class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
       </div>
+      <!-- <p class="about__desc">
+        I'm a freshman at UC Berkeley studying Electrical Engineering and Computer Sciences.
+      </p> -->
+      <!-- END PART 6 -->
     </div>
     <section id="projects" class="section projects">
       <h2 class="section__title">Projects</h2>
       <div class="projects__grid">
         <!-- BEGIN PART 8 -->
         <div class="project">
-          <h3>Project 1</h3>
+          <h3>Gitlet</h3>
           <p class="project__description">
-            Ipsum accusamus ea excepturi aliquid eligendi amet. Explicabo
-            sapiente debitis labore sed ipsam Mollitia repellat illum quod
-            unde beatae Quis
+            A mini version control system that implements the basic git functions:
+            push, pull, merge, branch, reset, rm, etc.
           </p>
           <ul class="project__stack">
-            <li class="project__stack-item">Python</li>
             <li class="project__stack-item">Java</li>
-            <li class="project__stack-item">JavaScript</li>
+            <li class="project__stack-item">Git</li>
           </ul>
 
           <a href="https://github.com" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://cs61bl.org/su21/projects/gitlet/" target="_blank" aria-label="description" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>Jump</h3>
+          <p class="project__description">
+            Game that allows player to dominate an NxN board with colored blocks by spreading dots.
+            Implemented an AI player using game tree theory.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">Java</li>
+            <li class="project__stack-item">Game Tree Theory</li>
+          </ul>
+
+          <a href="https://github.com" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://example.com" aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>Scheme Interpreter</h3>
+          <p class="project__description">
+            A Scheme interpreter that interprets commands calling basic Scheme functions such as
+            define, begin, if, cond, lambda, let, etc.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">Python</li>
+            <li class="project__stack-item">Scheme</li>
+          </ul>
+
+          <a href="https://github.com/elliesara" target="_blank" aria-label="source code" class="link link--icon">
             <i aria-hidden="true" class="fab fa-github"></i>
           </a>
           <a href="https://example.com" aria-label="live preview" class="link link--icon">
@@ -115,25 +167,38 @@
       <!-- BEGIN PART 10 -->
       <h2 class="section__title">Skills</h2>
       <ul class="skills__list">
-        <li class="skills__list-item btn btn--plain"></li>
-        <li class="skills__list-item btn btn--plain"></li>
-        <li class="skills__list-item btn btn--plain"></li>
+        <li class="skills__list-item btn btn--plain">Python</li>
+        <li class="skills__list-item btn btn--plain">Java</li>
+        <li class="skills__list-item btn btn--plain">C/C++</li>
+        <li class="skills__list-item btn btn--plain">JavaScript/HTML/CSS</li>
+        <li class="skills__list-item btn btn--plain">iOS</li>
+        <li class="skills__list-item btn btn--plain">Swift/SwiftUI</li>
+        <li class="skills__list-item btn btn--plain">Core Data</li>
+        <li class="skills__list-item btn btn--plain">Git</li>
+        <li class="skills__list-item btn btn--plain">SQL</li>
+        <li class="skills__list-item btn btn--plain">PCB Design</li>
+        <li class="skills__list-item btn btn--plain">Altium Designer</li>
       </ul>
       <!-- END PART 10 -->
     </section>
     <section class="section contact center" id="contact">
       <h2 class="section__title">Contact</h2>
-      <a href="mailto:youremail@gmail.com">
+      <a href="mailto:ellie.sara.huang@berkeley.edu">
         <span class="btn btn--outline">Email me</span>
       </a>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer footer-background">
     <!-- BEGIN PART 12 -->
     <a href="/" class="link footer__link">
       created by Ellie Sara Huang
     </a>
+    <p class="footer__text">
+      2650 Durant Ave, Berkeley, CA 94720 &nbsp; | &nbsp;
+      (925) 351-9695 &nbsp; | &nbsp;
+      ellie.sara.huang@berkeley.edu
+    </p>
     <!-- END PART 12 -->
   </footer>
 
