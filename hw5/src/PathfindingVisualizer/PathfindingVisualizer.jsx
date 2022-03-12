@@ -62,8 +62,8 @@ const PathfindingVisualizer = () => {
   };
 
   const visualizeDijkstra = () => {
-    const startNode = createNode(START_NODE_COL, START_NODE_ROW);
-    const finishNode = createNode(FINISH_NODE_COL, FINISH_NODE_ROW);
+    const startNode = grid[START_NODE_ROW][START_NODE_COL];
+    const finishNode = grid[FINISH_NODE_ROW][FINISH_NODE_COL];
     const visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
     const nodesInShortestPathOrder = getNodesInShortestPathOrder(finishNode);
     animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder);
@@ -71,7 +71,7 @@ const PathfindingVisualizer = () => {
 
   return (
     <>
-      <button onClick={() => visualizeDijkstra()}>
+      <button id = "buttonCSS" onClick={() => visualizeDijkstra()}>
         Visualize Dijkstra's Algorithm
       </button>
       <div className="grid">
